@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 
 export default function RootLayout({
     children,
@@ -6,6 +7,9 @@ export default function RootLayout({
 }>) {
     return (
         <main>
+            <div>
+                <NavBar />
+            </div>
             {children}
         </main>
     );

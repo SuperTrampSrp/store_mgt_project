@@ -24,4 +24,45 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .input-class {
+    @apply rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-full;
+  }
+
+  .input-blank {
+    @apply flex justify-between gap-1 pr-2 items-center;
+  }
+
+  .input-primary {
+    @apply flex justify-start pr-2 items-center;
+  }
+
+  .label-text {
+    @apply font-medium text-gray-900;
+  }
+
+  .label-secondary {
+    @apply w-5/12 flex justify-end pr-1;
+  }
+
+  .radio-primary {
+    @apply appearance-none w-4 h-4 border-2 border-teal-500 rounded-full checked:border-red-600;
+  }
+
+  .summary-grid {
+    @apply p-2 flex gap-1 flex-col;
+  }
+
+  .summary-items {
+    @apply flex justify-start pr-2 items-center gap-1;
+  }
+
+  .summary-input {
+    @apply w-1/2 flex justify-end pr-1;
+  }
+
+  .summary-btn {
+    @apply p-1 border border-none rounded-lg bg-cyan-600 hover:bg-cyan-500 w-20;
+  }
+
 }
