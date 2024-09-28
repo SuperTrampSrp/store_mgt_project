@@ -2,21 +2,36 @@
 
 import { useState, } from "react"
 import { menuData } from "@/constants";
-
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import MenuBar from "./MenuBar";
 import SalesDetails from "./SalesDetails";
+import { MouseEvent } from "react";
+import PurchaseDetails from "./PurchaseDetails";
+import ReceiptEntry from "./ReceiptEntry";
+import JurnalEntry from "./JurnalEntry";
 
 
 const NavBar = () => {
     const [openPrimaryIndex, setOpenPrimaryIndex] = useState<number | null>(null);
     const [openSecondaryIndex, setOpenSecondaryIndex] = useState<Record<number, number | null>>({});
 
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState<boolean>(false);
+    const [openSalesModal, setOpenSalesModal] = useState<boolean>(false);
+    const [openPurchaseModal, setOpenPurchaseModal] = useState<boolean>(false);
+    const [openRecieptEntryModal, setOpenRecieptEntryModal] = useState<boolean>(false);
+    const [openJurnalEntryModal, setOpenJurnalEntryModal] = useState<boolean>(false);
+    const [modalName, setModalName] = useState<string>()
+
 
     const handleOpenModal = () => setOpen(true);
-    const handleCloseModal = () => setOpen(false);
+    const handleCloseModal = () => {
+        setOpen(false);
+        setOpenSalesModal(false);
+        setOpenPurchaseModal(false);
+        setOpenRecieptEntryModal(false);
+        setOpenJurnalEntryModal(false);
+    }
 
     // Toggle the primary dropdown
     const togglePrimaryDropdown = (index: number): void => {
@@ -40,6 +55,34 @@ const NavBar = () => {
         }));
     };
 
+
+    const handleClick = (e: MouseEvent<HTMLElement>) => {
+        const id = e.currentTarget.id
+        setModalName(id)
+        switch (id) {
+            case 'Sales 1':
+                setOpenSalesModal(true)
+                break;
+
+            case 'Purchase 1':
+                setOpenPurchaseModal(true)
+                break;
+            case 'ReceiptEntry':
+                setOpenRecieptEntryModal(true)
+                break;
+            case 'Payment':
+                setOpenRecieptEntryModal(true)
+                break;
+            case 'Jurnal Entry':
+                setOpenJurnalEntryModal(true)
+                break;
+
+            default:
+                break;
+        }
+
+    }
+    console.log(modalName)
 
     return (
         <div>
@@ -73,7 +116,7 @@ const NavBar = () => {
                                                 {subItem.submenu ? (
                                                     <>
                                                         {/* Toggle secondary dropdown */}
-                                                        <button className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl w-full text-left transition-colors">
+                                                        <button className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl w-full text-left transition-colors" >
                                                             {subItem.title}
                                                             <ArrowForwardIosIcon
                                                                 style={{ color: 'white', height: '15px', float: 'right', marginTop: '6px' }}
@@ -85,7 +128,7 @@ const NavBar = () => {
                                                             <ul className="absolute left-full top-0 mt-2 bg-teal-900 border-white rounded-tr-xl shadow-lg z-10 hidden group-hover:block w-full">
                                                                 {subItem.submenu.map((option, optionIndex) => (
                                                                     <li key={optionIndex}>
-                                                                        <span className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl transition-colors cursor-pointer">
+                                                                        <span id={option} className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl transition-colors cursor-pointer" onClick={handleClick}>
                                                                             {option}
                                                                         </span>
                                                                     </li>
@@ -94,7 +137,7 @@ const NavBar = () => {
                                                         )}
                                                     </>
                                                 ) : (
-                                                    <span className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl transition-colors cursor-pointer">
+                                                    <span className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl transition-colors cursor-pointer" onClick={() => console.log("Clicked")}>
                                                         {subItem.title}
                                                     </span>
                                                 )}
@@ -107,10 +150,22 @@ const NavBar = () => {
                 </ul>
             </nav>
             <div>
-                <MenuBar onOpenModal={handleOpenModal} />
+                <MenuBar onOpenModal={handleOpenModal} handleClick={handleClick} />
 
                 {
                     open && (<SalesDetails onCloseModal={handleCloseModal} />)
+                }
+                {
+                    openSalesModal && (<SalesDetails onCloseModal={handleCloseModal} />)
+                }
+                {
+                    openPurchaseModal && (<PurchaseDetails onCloseModal={handleCloseModal} />)
+                }
+                {
+                    openRecieptEntryModal && (<ReceiptEntry onCloseModal={handleCloseModal} modalName={modalName} />)
+                }
+                {
+                    openJurnalEntryModal && (<JurnalEntry onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
             </div>
         </div>

@@ -4,10 +4,10 @@ import { ArrowCircleRight, ArrowCircleLeft, AutoStories, Draw, Delete, RecentAct
 import { updateTime } from '@/lib/utils';
 
 
-const MenuBar = ({ onOpenModal }: openModalProps) => {
+const MenuBar = ({ onOpenModal, handleClick }: openModalProps) => {
 
-    const [time, setTime] = useState('');
-    const [day, setDay] = useState('');
+    const [time, setTime] = useState<string>();
+    const [day, setDay] = useState<string>();
 
 
     useEffect(() => {
@@ -23,11 +23,14 @@ const MenuBar = ({ onOpenModal }: openModalProps) => {
     return (
         <div className='bg-slate-800 p-3 flex justify-between px-6 items-center border-t-2 border-teal-400'>
             <div className='flex justify-start gap-4'>
-                <button onClick={onOpenModal}>
+                <button onClick={onOpenModal} title='sales'>
                     <ArrowCircleRight fontSize='large' className='text-cyan-200 hover:scale-125' />
                 </button>
                 <ArrowCircleLeft fontSize='large' className='text-cyan-200 hover:scale-125' />
-                <ArrowCircleRight className='transform rotate-90 text-cyan-100 hover:scale-125' fontSize='large' />
+                <button onClick={handleClick} id='ReceiptEntry' title='ReceiptEntry'>
+                    <ArrowCircleRight className='transform rotate-90 text-cyan-100 hover:scale-125' fontSize='large' />
+                </button>
+
                 <ArrowCircleLeft className='transform rotate-90 text-cyan-100 hover:scale-125' fontSize='large' />
                 <AutoStories fontSize='large' className='text-orange-500 hover:scale-125' />
                 <AutoStories fontSize='large' className='text-blue-500 hover:scale-125' />

@@ -1,5 +1,4 @@
-import { MenuItem } from "@/types";
-export const menuData: MenuItem[] = [
+export const menuData: MenuItemProps[] = [
     {
         title: 'File',
         submenu: [
@@ -68,7 +67,7 @@ export const menuData: MenuItem[] = [
         submenu: [
             {
                 title: 'Sales',
-                submenu: ['Sales 1', 'Sales 2', 'Sales 3']
+                submenu: ['New', 'Edit', 'Cancel', 'Reprint']
             },
             {
                 title: 'Sales Return',
@@ -76,7 +75,7 @@ export const menuData: MenuItem[] = [
             },
             {
                 title: 'Purchase',
-                submenu: ['Purchase 1', 'Purchase 2', 'Purchase 3']
+                submenu: ['Bill', 'Edit', 'Cancel']
             },
             {
                 title: 'Purchase Return',
@@ -102,7 +101,7 @@ export const menuData: MenuItem[] = [
             },
             {
                 title: 'Accounts',
-                submenu: ['Accounts 1', 'Accounts 2', 'Accounts 3']
+                submenu: ['Receipt', 'Payment', 'Edit Rcpt/Pymt', 'Cancel Rcpt/Pymt', 'Jurnal Entry', 'Cheque Register']
             },
             {
                 title: 'Debit Note',
@@ -206,76 +205,55 @@ export const menuData: MenuItem[] = [
 ];
 
 
-export const groceryItems = [
-    {
-        "name": "Rice",
-        "qty": 2,
-        "unit": "kg",
-        "rate": 50,
-        "discPercent": 5,
-        "disc": 5,
-        "value": 95,
-        "cgstPercent": 2.5,
-        "cgst": 2.38,
-        "sgstPercent": 2.5,
-        "sgst": 2.38,
-        "total": 99.76
-    },
-    {
-        "name": "Wheat Flour",
-        "qty": 5,
-        "unit": "kg",
-        "rate": 30,
-        "discPercent": 10,
-        "disc": 15,
-        "value": 135,
-        "cgstPercent": 2.5,
-        "cgst": 3.38,
-        "sgstPercent": 2.5,
-        "sgst": 3.38,
-        "total": 141.76
-    },
-    {
-        "name": "Sugar",
-        "qty": 3,
-        "unit": "kg",
-        "rate": 40,
-        "discPercent": 0,
-        "disc": 0,
-        "value": 120,
-        "cgstPercent": 2.5,
-        "cgst": 3,
-        "sgstPercent": 2.5,
-        "sgst": 3,
-        "total": 126
-    },
-    {
-        "name": "Cooking Oil",
-        "qty": 2,
-        "unit": "litre",
-        "rate": 150,
-        "discPercent": 5,
-        "disc": 15,
-        "value": 285,
-        "cgstPercent": 2.5,
-        "cgst": 7.13,
-        "sgstPercent": 2.5,
-        "sgst": 7.13,
-        "total": 299.26
-    },
-    {
-        "name": "Milk",
-        "qty": 6,
-        "unit": "litre",
-        "rate": 50,
-        "discPercent": 0,
-        "disc": 0,
-        "value": 300,
-        "cgstPercent": 2.5,
-        "cgst": 7.5,
-        "sgstPercent": 2.5,
-        "sgst": 7.5,
-        "total": 315
-    }
-]
 
+export const groceryItems = [
+    { value: "rice", label: "Rice" },
+    { value: "wheat", label: "Wheat" },
+    { value: "sugar", label: "Sugar" },
+    { value: "salt", label: "Salt" },
+    { value: "flour", label: "Flour" },
+    { value: "lentils", label: "Lentils" },
+    { value: "chickpeas", label: "Chickpeas" },
+    { value: "red_kidney_beans", label: "Red Kidney Beans" },
+    { value: "black_beans", label: "Black Beans" },
+    { value: "quinoa", label: "Quinoa" },
+    { value: "pasta", label: "Pasta" },
+    { value: "noodles", label: "Noodles" },
+    { value: "spaghetti", label: "Spaghetti" },
+    { value: "olive_oil", label: "Olive Oil" },
+    { value: "vegetable_oil", label: "Vegetable Oil" },
+    { value: "peanut_oil", label: "Peanut Oil" },
+    { value: "butter", label: "Butter" },
+    { value: "ghee", label: "Ghee" },
+    { value: "milk", label: "Milk" },
+    { value: "yogurt", label: "Yogurt" },
+    { value: "cheese", label: "Cheese" },
+    { value: "eggs", label: "Eggs" },
+    { value: "bread", label: "Bread" },
+    { value: "oats", label: "Oats" },
+    { value: "cornflakes", label: "Cornflakes" },
+    { value: "honey", label: "Honey" },
+    { value: "jam", label: "Jam" },
+    { value: "peanut_butter", label: "Peanut Butter" },
+    { value: "potatoes", label: "Potatoes" },
+    { value: "onions", label: "Onions" },
+    { value: "garlic", label: "Garlic" },
+    { value: "ginger", label: "Ginger" },
+    { value: "tomatoes", label: "Tomatoes" },
+    { value: "cucumber", label: "Cucumber" },
+    { value: "carrots", label: "Carrots" },
+    { value: "bell_peppers", label: "Bell Peppers" },
+    { value: "broccoli", label: "Broccoli" },
+    { value: "spinach", label: "Spinach" },
+    { value: "cabbage", label: "Cabbage" },
+    { value: "cauliflower", label: "Cauliflower" },
+    { value: "apples", label: "Apples" },
+    { value: "bananas", label: "Bananas" },
+    { value: "oranges", label: "Oranges" },
+    { value: "grapes", label: "Grapes" },
+    { value: "lemons", label: "Lemons" },
+    { value: "strawberries", label: "Strawberries" },
+    { value: "blueberries", label: "Blueberries" },
+    { value: "watermelon", label: "Watermelon" },
+    { value: "pineapple", label: "Pineapple" }
+];
