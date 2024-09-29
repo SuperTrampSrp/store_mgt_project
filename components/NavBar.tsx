@@ -10,6 +10,7 @@ import { MouseEvent } from "react";
 import PurchaseDetails from "./PurchaseDetails";
 import ReceiptEntry from "./ReceiptEntry";
 import JurnalEntry from "./JurnalEntry";
+import CashBook from "./CashBook";
 
 
 const NavBar = () => {
@@ -21,6 +22,7 @@ const NavBar = () => {
     const [openPurchaseModal, setOpenPurchaseModal] = useState<boolean>(false);
     const [openRecieptEntryModal, setOpenRecieptEntryModal] = useState<boolean>(false);
     const [openJurnalEntryModal, setOpenJurnalEntryModal] = useState<boolean>(false);
+    const [openCashbookModal, setOpenCashbookModal] = useState<boolean>(false);
     const [modalName, setModalName] = useState<string>()
 
 
@@ -31,6 +33,7 @@ const NavBar = () => {
         setOpenPurchaseModal(false);
         setOpenRecieptEntryModal(false);
         setOpenJurnalEntryModal(false);
+        setOpenCashbookModal(false);
     }
 
     // Toggle the primary dropdown
@@ -75,6 +78,9 @@ const NavBar = () => {
                 break;
             case 'Jurnal Entry':
                 setOpenJurnalEntryModal(true)
+                break;
+            case 'Cashbook':
+                setOpenCashbookModal(true)
                 break;
 
             default:
@@ -166,6 +172,9 @@ const NavBar = () => {
                 }
                 {
                     openJurnalEntryModal && (<JurnalEntry onCloseModal={handleCloseModal} modalName={modalName} />)
+                }
+                {
+                    openCashbookModal && (<CashBook onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
             </div>
         </div>

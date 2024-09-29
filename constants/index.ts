@@ -257,3 +257,23 @@ export const groceryItems = [
     { value: "watermelon", label: "Watermelon" },
     { value: "pineapple", label: "Pineapple" }
 ];
+
+export const cashbookEntries: CashbookEntry[] = [
+    {
+        date: "2024-09-29",
+        voucherNo: "V001",
+        accName: "Cash Account",
+        narration: "Payment received for services",
+        debit: 0,
+        credit: 1000,
+    },
+    {
+        date: "2024-09-28",
+        voucherNo: "V002",
+        accName: "Sales Account",
+        narration: "Sale of goods",
+        debit: 5000,
+        credit: 0,
+    },
+];
+

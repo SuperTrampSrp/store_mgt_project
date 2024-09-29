@@ -36,3 +36,12 @@ declare type TableSelectorProps = {
 declare type ChildProps = {
     parentRef: React.RefObject<HTMLDivElement>;
 };
+
+declare type CashbookEntry {
+    date: string;
+    voucherNo: string;
+    accName: string;
+    narration: string;
+    debit: number;
+    credit: number;
+}

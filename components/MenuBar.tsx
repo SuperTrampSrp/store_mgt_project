@@ -33,7 +33,9 @@ const MenuBar = ({ onOpenModal, handleClick }: openModalProps) => {
 
                 <ArrowCircleLeft className='transform rotate-90 text-cyan-100 hover:scale-125' fontSize='large' />
                 <AutoStories fontSize='large' className='text-orange-500 hover:scale-125' />
-                <AutoStories fontSize='large' className='text-blue-500 hover:scale-125' />
+                <button onClick={handleClick} id='Cashbook' title='Cashbook'>
+                    <AutoStories fontSize='large' className='text-blue-500 hover:scale-125' />
+                </button>
                 <Draw fontSize='large' className='text-emerald-300 hover:scale-125' />
                 <Delete fontSize='large' className='text-red-500 hover:scale-125' />
                 <RecentActors fontSize='large' className='text-cyan-500 hover:scale-125' />

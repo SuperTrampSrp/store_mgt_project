@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const ScrollTable = ({ parentRef }: ChildProps) => {
     const [items, setItems] = useState<string[]>([])
-    const [value, setValue] = useState("")
+    const [value, setValue] = useState<string>("")
 
     useEffect(() => {
         setItems((previtems) => {
