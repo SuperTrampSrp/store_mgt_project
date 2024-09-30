@@ -11,6 +11,8 @@ import PurchaseDetails from "./PurchaseDetails";
 import ReceiptEntry from "./ReceiptEntry";
 import JurnalEntry from "./JurnalEntry";
 import CashBook from "./CashBook";
+import BarcodeRegister from "./BarcodeRegister";
+import CustomerDetails from "./CustomerDetails";
 
 
 const NavBar = () => {
@@ -23,6 +25,8 @@ const NavBar = () => {
     const [openRecieptEntryModal, setOpenRecieptEntryModal] = useState<boolean>(false);
     const [openJurnalEntryModal, setOpenJurnalEntryModal] = useState<boolean>(false);
     const [openCashbookModal, setOpenCashbookModal] = useState<boolean>(false);
+    const [openBarcodeRegisterModal, setOpenBarcodeRegisterModal] = useState<boolean>(false);
+    const [openCustomerDetailsModal, setOpenCustomerDetailsModal] = useState<boolean>(false);
     const [modalName, setModalName] = useState<string>()
 
 
@@ -34,6 +38,8 @@ const NavBar = () => {
         setOpenRecieptEntryModal(false);
         setOpenJurnalEntryModal(false);
         setOpenCashbookModal(false);
+        setOpenBarcodeRegisterModal(false)
+        setOpenCustomerDetailsModal(false)
     }
 
     // Toggle the primary dropdown
@@ -82,13 +88,18 @@ const NavBar = () => {
             case 'Cashbook':
                 setOpenCashbookModal(true)
                 break;
+            case 'Barcode Register':
+                setOpenBarcodeRegisterModal(true)
+                break;
+            case 'Customer':
+                setOpenCustomerDetailsModal(true)
+                break;
 
             default:
                 break;
         }
 
     }
-    console.log(modalName)
 
     return (
         <div>
@@ -143,7 +154,7 @@ const NavBar = () => {
                                                         )}
                                                     </>
                                                 ) : (
-                                                    <span className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl transition-colors cursor-pointer" onClick={() => console.log("Clicked")}>
+                                                    <span id={subItem.title} className="block py-2 px-4 text-slate-50 hover:bg-teal-800 border-teal-200 rounded-tr-xl transition-colors cursor-pointer" onClick={handleClick}>
                                                         {subItem.title}
                                                     </span>
                                                 )}
@@ -175,6 +186,12 @@ const NavBar = () => {
                 }
                 {
                     openCashbookModal && (<CashBook onCloseModal={handleCloseModal} modalName={modalName} />)
+                }
+                {
+                    openBarcodeRegisterModal && (<BarcodeRegister onCloseModal={handleCloseModal} modalName={modalName} />)
+                }
+                {
+                    openCustomerDetailsModal && (<CustomerDetails onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
             </div>
         </div>

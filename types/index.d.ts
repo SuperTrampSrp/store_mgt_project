@@ -37,11 +37,25 @@ declare type ChildProps = {
     parentRef: React.RefObject<HTMLDivElement>;
 };
 
-declare type CashbookEntry {
+declare type CashbookEntry = {
     date: string;
     voucherNo: string;
     accName: string;
     narration: string;
     debit: number;
     credit: number;
+}
+
+declare type BarcodeEntry = {
+    date: string;
+    itemName: string;
+    company: string;
+    size: string;
+    barcode: string;
+    qty: number;
+    purchaseRate: number;
+    free: number;
+    saleRate: number;
+    mrp: number;
+    print: boolean;
 }

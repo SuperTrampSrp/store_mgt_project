@@ -6,6 +6,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html:host {
+  text-size-adjust: 100%;
+  /* Standard property */
+  -webkit-text-size-adjust: 100%;
+  /* Webkit browsers (Chrome, Safari, Android, etc.) */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

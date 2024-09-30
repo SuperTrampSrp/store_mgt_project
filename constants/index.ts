@@ -22,7 +22,7 @@ export const menuData: MenuItemProps[] = [
             },
             {
                 title: 'Customer',
-                submenu: ['Customer 1', 'Customer 2', 'Customer 3']
+                submenu: ['Customer', 'Type',]
             },
             {
                 title: 'Supplier',
@@ -156,6 +156,7 @@ export const menuData: MenuItemProps[] = [
             },
             {
                 title: 'Accounts',
+                submenu: ['A/c Ledger', 'Daybook', 'Cashbook', 'Rcpt/Pymt Report', 'Cheque Register', 'Chart of Accounts', 'Trial Balance', 'Balance Sheet', 'Profit Loss']
             },
             {
                 title: 'Sales',
@@ -274,6 +275,35 @@ export const cashbookEntries: CashbookEntry[] = [
         narration: "Sale of goods",
         debit: 5000,
         credit: 0,
+    },
+];
+
+export const barcodeEntries: BarcodeEntry[] = [
+    {
+        date: "2024-09-29",
+        itemName: "Soap",
+        company: "CleanCo",
+        size: "100g",
+        barcode: "1234567890123",
+        qty: 50,
+        purchaseRate: 20,
+        free: 2,
+        saleRate: 25,
+        mrp: 30,
+        print: true,
+    },
+    {
+        date: "2024-09-28",
+        itemName: "Shampoo",
+        company: "HairCare Inc.",
+        size: "200ml",
+        barcode: "9876543210987",
+        qty: 100,
+        purchaseRate: 150,
+        free: 5,
+        saleRate: 180,
+        mrp: 200,
+        print: false,
     },
 ];
 
