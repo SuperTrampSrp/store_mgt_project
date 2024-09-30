@@ -11,8 +11,8 @@ const BarcodeRegister = ({ onCloseModal }: closeModalProps) => {
 
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
-            <div className="bg-teal-900 border border-teal-600 border-solid border-l-teal-800 rounded-lg shadow-lg transform transition-all duration-300 scale-100 w-11/12">
+        <div className="modal-primary_div">
+            <div className="modal-main_div">
                 <div className="flex justify-center text-white">
                     <h2 className="text-xl font-bold m-2">Barcode Register</h2>
                 </div>
@@ -40,7 +40,7 @@ const BarcodeRegister = ({ onCloseModal }: closeModalProps) => {
                                 </label>
                             </div>
                             <div className="flex justify-start">
-                                <select name="item" id="item" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                <select name="item" id="item" className="addcustomer-select">
                                     <option value=""></option>
                                     <option value="customer1">Customer 1</option>
                                     <option value="customer2">Customer 2</option>
@@ -132,7 +132,7 @@ const BarcodeRegister = ({ onCloseModal }: closeModalProps) => {
                 <div className="flex justify-center pb-2">
                     <button
                         onClick={onCloseModal}
-                        className="mt-2 bg-red-500 text-white py-1 px-2 rounded-full hover:bg-red-600 transition-colors"
+                        className="modal-close_btn"
                     >
                         <CloseIcon />
                     </button>

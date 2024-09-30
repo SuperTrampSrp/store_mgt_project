@@ -5,8 +5,8 @@ import Alert from './Alert';
 const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
-            <div className="bg-teal-900 border border-teal-600 border-solid border-l-teal-800 rounded-lg shadow-lg transform transition-all duration-300 scale-100 w-4/6">
+        <div className="modal-primary_div">
+            <div className="modal-main_div w-8/12">
                 <div className="flex justify-center text-white">
                     <h2 className="text-xl font-bold m-2">Customer Details</h2>
                 </div>
@@ -31,8 +31,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                            <div className="addcustomer-input_div">
+                                <div className=" addcustomer-label_div">
                                     <label htmlFor="name">
                                         Name :
                                     </label>
@@ -46,8 +46,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                            <div className="addcustomer-input_div">
+                                <div className=" addcustomer-label_div">
                                     <label htmlFor="address">
                                         Address :
                                     </label>
@@ -61,8 +61,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                            <div className="addcustomer-input_div">
+                                <div className=" addcustomer-label_div">
 
                                 </div>
                                 <div className="w-full">
@@ -74,8 +74,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                            <div className="addcustomer-input_div">
+                                <div className=" addcustomer-label_div">
 
                                 </div>
                                 <div className="w-full">
@@ -87,8 +87,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                            <div className="addcustomer-input_div">
+                                <div className=" addcustomer-label_div">
                                     <label htmlFor="constactPerson">
                                         Constact Person:
                                     </label>
@@ -102,8 +102,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                            <div className="addcustomer-input_div">
+                                <div className=" addcustomer-label_div">
                                     <label htmlFor="email">
                                         Email:
                                     </label>
@@ -117,8 +117,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     />
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className="flex justify-start w-6/12">
+                            <div className="addcustomer-input_div">
+                                <div className="addcustomer-dubleentry">
                                     <div className=" flex justify-end items-center pr-1 w-6/12">
                                         <label htmlFor="fax">
                                             Fax :
@@ -133,8 +133,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                         />
                                     </div>
                                 </div>
-                                <div className="flex justify-start w-6/12">
-                                    <div className=" flex justify-end items-center pr-1 w-4/12">
+                                <div className="addcustomer-dubleentry">
+                                    <div className=" addcustomer-label_div">
                                         <label htmlFor="phone">
                                             Phone :
                                         </label>
@@ -149,11 +149,11 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className="flex justify-start w-6/12">
+                            <div className="addcustomer-input_div">
+                                <div className="addcustomer-dubleentry">
                                     <div className=" flex justify-end items-center pr-1 w-6/12">
                                         <label htmlFor="mob">
-                                            Mon :
+                                            Mob :
                                         </label>
                                     </div>
                                     <div className="w-6/12">
@@ -165,8 +165,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                         />
                                     </div>
                                 </div>
-                                <div className="flex justify-start w-6/12">
-                                    <div className=" flex justify-end items-center pr-1 w-4/12">
+                                <div className="addcustomer-dubleentry">
+                                    <div className=" addcustomer-label_div">
                                         <label htmlFor="gstIn">
                                             GST In:
                                         </label>
@@ -181,16 +181,16 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className="flex justify-start w-6/12">
+                            <div className="addcustomer-input_div">
+                                <div className="addcustomer-dubleentry">
                                     <div className=" flex justify-end items-center pr-1 w-6/12">
                                     </div>
                                     <div className="w-6/12">
 
                                     </div>
                                 </div>
-                                <div className="flex justify-start w-6/12">
-                                    <div className=" flex justify-end items-center pr-1 w-4/12">
+                                <div className="addcustomer-dubleentry">
+                                    <div className=" addcustomer-label_div">
                                         <label htmlFor="cst">
                                             CST:
                                         </label>
@@ -205,8 +205,8 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex justify-start w-full">
-                                <div className="flex justify-start w-6/12">
+                            <div className="addcustomer-input_div">
+                                <div className="addcustomer-dubleentry">
                                     <div className=" flex justify-end items-center pr-1 w-6/12">
                                         <label htmlFor="opBal">
                                             OP. Balance
@@ -251,7 +251,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </label>
                                 </div>
                                 <div className="flex justify-start w-7/12">
-                                    <select name="route" id="route" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                    <select name="route" id="route" className="addcustomer-select">
                                         <option value=""></option>
                                         <option value="customer1">Customer 1</option>
                                         <option value="customer2">Customer 2</option>
@@ -262,7 +262,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </select>
                                 </div>
                                 <div className="flex justify-center w-2/12">
-                                    <button className="btn-secondary bg-teal-700 text-cyan-50 border-none hover:bg-teal-950">New</button>
+                                    <button className="addcustomer-btn_new">New</button>
                                 </div>
                             </div>
                             <div className="flex justify-center pr-2 items-center">
@@ -272,7 +272,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </label>
                                 </div>
                                 <div className="flex justify-start w-7/12">
-                                    <select name="city" id="city" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                    <select name="city" id="city" className="addcustomer-select">
                                         <option value=""></option>
                                         <option value="customer1">Customer 1</option>
                                         <option value="customer2">Customer 2</option>
@@ -283,7 +283,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </select>
                                 </div>
                                 <div className="flex justify-center w-2/12">
-                                    <button className="btn-secondary bg-teal-700 text-cyan-50 border-none hover:bg-teal-950">New</button>
+                                    <button className="addcustomer-btn_new">New</button>
                                 </div>
                             </div>
                             <div className="flex justify-center pr-2 items-center">
@@ -293,7 +293,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </label>
                                 </div>
                                 <div className="flex justify-start w-7/12">
-                                    <select name="town" id="town" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                    <select name="town" id="town" className="addcustomer-select">
                                         <option value=""></option>
                                         <option value="customer1">Customer 1</option>
                                         <option value="customer2">Customer 2</option>
@@ -304,7 +304,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </select>
                                 </div>
                                 <div className="flex justify-center w-2/12">
-                                    <button className="btn-secondary bg-teal-700 text-cyan-50 border-none hover:bg-teal-950">New</button>
+                                    <button className="addcustomer-btn_new">New</button>
                                 </div>
                             </div>
                             <div className="flex justify-center pr-2 items-center">
@@ -314,7 +314,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </label>
                                 </div>
                                 <div className="flex justify-start w-7/12">
-                                    <select name="district" id="district" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                    <select name="district" id="district" className="addcustomer-select">
                                         <option value=""></option>
                                         <option value="customer1">Customer 1</option>
                                         <option value="customer2">Customer 2</option>
@@ -325,7 +325,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </select>
                                 </div>
                                 <div className="flex justify-center w-2/12">
-                                    <button className="btn-secondary bg-teal-700 text-cyan-50 border-none hover:bg-teal-950">New</button>
+                                    <button className="addcustomer-btn_new">New</button>
                                 </div>
                             </div>
                             <div className="flex justify-start pr-2 items-center">
@@ -335,7 +335,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </label>
                                 </div>
                                 <div className="flex justify-start w-7/12">
-                                    <select name="type" id="type" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                    <select name="type" id="type" className="addcustomer-select">
                                         <option value=""></option>
                                         <option value="customer1">Customer 1</option>
                                         <option value="customer2">Customer 2</option>
@@ -353,7 +353,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </label>
                                 </div>
                                 <div className="flex justify-start w-7/12">
-                                    <select name="rateType" id="rateType" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                    <select name="rateType" id="rateType" className="addcustomer-select">
                                         <option value=""></option>
                                         <option value="customer1">Customer 1</option>
                                         <option value="customer2">Customer 2</option>
@@ -371,7 +371,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                     </label>
                                 </div>
                                 <div className="flex justify-start w-7/12">
-                                    <select name="billType" id="billType" className="rounded-md border-0 py-1.5 pl-2 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-teal-600 w-72 h-9">
+                                    <select name="billType" id="billType" className="addcustomer-select">
                                         <option value=""></option>
                                         <option value="customer1">Customer 1</option>
                                         <option value="customer2">Customer 2</option>
@@ -401,7 +401,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                     <div className='flex justify-between gap-2'>
                         <div className='w-5/12 flex flex-col gap-1'>
                             <div className="flex justify-start">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                                <div className=" addcustomer-label_div">
                                     <label htmlFor="creditLmtAmt">
                                         Credit Lmt Amt :
                                     </label>
@@ -416,7 +416,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                 </div>
                             </div>
                             <div className="flex justify-start">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                                <div className=" addcustomer-label_div">
                                     <label htmlFor="creditLmtDays">
                                         Credit Lmt Days :
                                     </label>
@@ -431,7 +431,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                                 </div>
                             </div>
                             <div className="flex justify-start">
-                                <div className=" flex justify-end items-center pr-1 w-4/12">
+                                <div className=" addcustomer-label_div">
                                     <label htmlFor="discPerc">
                                         Disc % :
                                     </label>
@@ -461,7 +461,7 @@ const CustomerDetails = ({ onCloseModal }: closeModalProps) => {
                 <div className="flex justify-center pb-2">
                     <button
                         onClick={onCloseModal}
-                        className="mt-2 bg-red-500 text-white py-1 px-2 rounded-full hover:bg-red-600 transition-colors"
+                        className="modal-close_btn"
                         title='close'
                     >
                         <Close />

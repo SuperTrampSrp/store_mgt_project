@@ -10,8 +10,8 @@ const PurchaseDetails = ({ onCloseModal }: closeModalProps) => {
 
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
-            <div className="bg-teal-900 border border-teal-600 border-solid border-l-teal-800 rounded-lg shadow-lg transform transition-all duration-300 scale-100 w-11/12">
+        <div className="modal-primary_div">
+            <div className="modal-main_div">
                 <div className="flex justify-center text-white">
                     <h2 className="text-xl font-bold m-2">Purchase Details</h2>
                 </div>
@@ -210,7 +210,7 @@ const PurchaseDetails = ({ onCloseModal }: closeModalProps) => {
                 <div className="flex justify-center pb-2">
                     <button
                         onClick={onCloseModal}
-                        className="mt-2 bg-red-500 text-white py-1 px-2 rounded-full hover:bg-red-600 transition-colors"
+                        className="modal-close_btn"
                     >
                         <CloseIcon />
                     </button>
