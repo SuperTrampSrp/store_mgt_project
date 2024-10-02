@@ -13,34 +13,19 @@ import JurnalEntry from "./JurnalEntry";
 import CashBook from "./CashBook";
 import BarcodeRegister from "./BarcodeRegister";
 import CustomerDetails from "./CustomerDetails";
+import { useModalStore } from "@/app/store/modals";
 
 
 const NavBar = () => {
     const [openPrimaryIndex, setOpenPrimaryIndex] = useState<number | null>(null);
     const [openSecondaryIndex, setOpenSecondaryIndex] = useState<Record<number, number | null>>({});
 
-    const [open, setOpen] = useState<boolean>(false);
-    const [openSalesModal, setOpenSalesModal] = useState<boolean>(false);
-    const [openPurchaseModal, setOpenPurchaseModal] = useState<boolean>(false);
-    const [openRecieptEntryModal, setOpenRecieptEntryModal] = useState<boolean>(false);
-    const [openJurnalEntryModal, setOpenJurnalEntryModal] = useState<boolean>(false);
-    const [openCashbookModal, setOpenCashbookModal] = useState<boolean>(false);
-    const [openBarcodeRegisterModal, setOpenBarcodeRegisterModal] = useState<boolean>(false);
-    const [openCustomerDetailsModal, setOpenCustomerDetailsModal] = useState<boolean>(false);
     const [modalName, setModalName] = useState<string>()
 
+    const { isCashbookModal, isSalesModal, isBarcodeRegisterModal, isCustomerDetailsModal, isJurnalEntryModal, isPurchaseModal, isRecieptEntryModal, openSalesModal, openCashbookModal, openBarcodeRegisterModal, openCustomerDetailsModal, openJurnalEntryModal, openPurchaseModal, openRecieptEntryModal, closeModal } = useModalStore();
 
-    const handleOpenModal = () => setOpen(true);
-    const handleCloseModal = () => {
-        setOpen(false);
-        setOpenSalesModal(false);
-        setOpenPurchaseModal(false);
-        setOpenRecieptEntryModal(false);
-        setOpenJurnalEntryModal(false);
-        setOpenCashbookModal(false);
-        setOpenBarcodeRegisterModal(false)
-        setOpenCustomerDetailsModal(false)
-    }
+
+    const handleCloseModal = () => closeModal();
 
     // Toggle the primary dropdown
     const togglePrimaryDropdown = (index: number): void => {
@@ -69,30 +54,29 @@ const NavBar = () => {
         const id = e.currentTarget.id
         setModalName(id)
         switch (id) {
-            case 'Sales 1':
-                setOpenSalesModal(true)
+            case 'New':
+                openSalesModal()
                 break;
-
-            case 'Purchase 1':
-                setOpenPurchaseModal(true)
+            case 'Bill':
+                openPurchaseModal()
                 break;
             case 'ReceiptEntry':
-                setOpenRecieptEntryModal(true)
+                openRecieptEntryModal()
                 break;
             case 'Payment':
-                setOpenRecieptEntryModal(true)
+                openRecieptEntryModal()
                 break;
             case 'Jurnal Entry':
-                setOpenJurnalEntryModal(true)
+                openJurnalEntryModal()
                 break;
             case 'Cashbook':
-                setOpenCashbookModal(true)
+                openCashbookModal()
                 break;
             case 'Barcode Register':
-                setOpenBarcodeRegisterModal(true)
+                openBarcodeRegisterModal()
                 break;
             case 'Customer':
-                setOpenCustomerDetailsModal(true)
+                openCustomerDetailsModal()
                 break;
 
             default:
@@ -100,6 +84,7 @@ const NavBar = () => {
         }
 
     }
+    console.log(modalName)
 
     return (
         <div>
@@ -167,31 +152,29 @@ const NavBar = () => {
                 </ul>
             </nav>
             <div>
-                <MenuBar onOpenModal={handleOpenModal} handleClick={handleClick} />
+                <MenuBar onOpenModal={openSalesModal} handleClick={handleClick} />
+
 
                 {
-                    open && (<SalesDetails onCloseModal={handleCloseModal} />)
+                    isSalesModal && (<SalesDetails onCloseModal={handleCloseModal} />)
                 }
                 {
-                    openSalesModal && (<SalesDetails onCloseModal={handleCloseModal} />)
+                    isPurchaseModal && (<PurchaseDetails onCloseModal={handleCloseModal} />)
                 }
                 {
-                    openPurchaseModal && (<PurchaseDetails onCloseModal={handleCloseModal} />)
+                    isRecieptEntryModal && (<ReceiptEntry onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
                 {
-                    openRecieptEntryModal && (<ReceiptEntry onCloseModal={handleCloseModal} modalName={modalName} />)
+                    isJurnalEntryModal && (<JurnalEntry onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
                 {
-                    openJurnalEntryModal && (<JurnalEntry onCloseModal={handleCloseModal} modalName={modalName} />)
+                    isCashbookModal && (<CashBook onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
                 {
-                    openCashbookModal && (<CashBook onCloseModal={handleCloseModal} modalName={modalName} />)
+                    isBarcodeRegisterModal && (<BarcodeRegister onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
                 {
-                    openBarcodeRegisterModal && (<BarcodeRegister onCloseModal={handleCloseModal} modalName={modalName} />)
-                }
-                {
-                    openCustomerDetailsModal && (<CustomerDetails onCloseModal={handleCloseModal} modalName={modalName} />)
+                    isCustomerDetailsModal && (<CustomerDetails onCloseModal={handleCloseModal} modalName={modalName} />)
                 }
             </div>
         </div>

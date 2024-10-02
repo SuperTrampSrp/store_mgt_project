@@ -59,3 +59,49 @@ declare type BarcodeEntry = {
     mrp: number;
     print: boolean;
 }
+
+declare type SalesStateProps = {
+    docNo: string;
+    credit: boolean;
+    customer: string;
+    customer: string;
+    phone: string;
+    gstIn: string;
+    salesman: string;
+    coCode: string;
+    cashBank: string;
+    orderNo: string;
+    date: string;
+    billType: string;
+    rateType: string;
+    vehNo: string;
+    driver: string;
+    sitr: string;
+    useCess: boolean;
+    reverseCharge: boolean;
+    interstate: boolean;
+    estimatePrint: boolean;
+
+}
+
+declare type ModalState = {
+    isCashbookModal: boolean;
+    isSalesModal: boolean;
+    isPurchaseModal: boolean,
+    isRecieptEntryModal: boolean,
+    isJurnalEntryModal: boolean,
+    isBarcodeRegisterModal: boolean,
+    isCustomerDetailsModal: boolean,
+
+    openCashbookModal: () => void;
+    openSalesModal: () => void;
+    openPurchaseModal: () => void;
+    openRecieptEntryModal: () => void;
+    openJurnalEntryModal: () => void;
+    openBarcodeRegisterModal: () => void;
+    openCustomerDetailsModal: () => void;
+
+    closeModal: () => void;
+
+
+}
