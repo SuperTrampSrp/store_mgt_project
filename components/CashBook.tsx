@@ -4,7 +4,6 @@ import { TableSelector } from "./TableSelector";
 import CashTable from "./CashTable";
 
 const CashBook = ({ onCloseModal }: closeModalProps) => {
-    const [items, setItems] = useState<string[]>([])
     const [value, setValue] = useState<string>("")
 
 

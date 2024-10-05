@@ -8,10 +8,9 @@ const PurchaseDetails = ({ onCloseModal }: closeModalProps) => {
 
     const parentRef = useRef(null);
 
-
     return (
         <div className="modal-primary_div">
-            <div className="modal-main_div">
+            <div className="modal-main_div w-11/12">
                 <div className="flex justify-center text-white">
                     <h2 className="text-xl font-bold m-2">Purchase Details</h2>
                 </div>

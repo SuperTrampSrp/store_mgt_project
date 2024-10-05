@@ -1,211 +1,3 @@
-export const menuData: MenuItemProps[] = [
-    {
-        title: 'File',
-        submenu: [
-            {
-                title: 'Printer Settings',
-            },
-            {
-                title: 'Biltech Settings'
-            },
-            {
-                title: 'Exit'
-            }
-        ]
-    },
-    {
-        title: 'Master',
-        submenu: [
-            {
-                title: 'Accounts',
-                submenu: ['Accounts 1', 'Accounts 2', 'Accounts 3']
-            },
-            {
-                title: 'Customer',
-                submenu: ['Customer', 'Type',]
-            },
-            {
-                title: 'Supplier',
-            },
-            {
-                title: 'Staff',
-            },
-            {
-                title: 'Vehicle',
-            },
-            {
-                title: 'Items',
-                submenu: ['Items 1', 'Items 2', 'Items 3']
-            },
-            {
-                title: 'Route',
-            },
-            {
-                title: 'City',
-            },
-            {
-                title: 'Town',
-            },
-            {
-                title: 'District',
-            },
-            {
-                title: 'Bill Type',
-            },
-            {
-                title: 'Counter',
-            },
-            {
-                title: 'User',
-                submenu: ['User 1', 'User 2', 'User 3']
-            },
-
-        ]
-    },
-    {
-        title: 'Transactions',
-        submenu: [
-            {
-                title: 'Sales',
-                submenu: ['New', 'Edit', 'Cancel', 'Reprint']
-            },
-            {
-                title: 'Sales Return',
-                submenu: ['Sales Return 1', 'Sales Return 2', 'Sales Return 3']
-            },
-            {
-                title: 'Purchase',
-                submenu: ['Bill', 'Edit', 'Cancel']
-            },
-            {
-                title: 'Purchase Return',
-                submenu: ['Purchase Return 1', 'Purchase Return 2', 'Purchase Return 3']
-            },
-            {
-                title: 'Rent Issue',
-                submenu: ['Rent Issue 1', 'Rent Issue 2', 'Rent Issue 3']
-            },
-            {
-                title: 'Rent Return',
-                submenu: ['Rent Return 1', 'Rent Return 2', 'Rent Return 3']
-            },
-            {
-                title: 'Order',
-                submenu: ['Order 1', 'Order 2', 'Order 3']
-            },
-            {
-                title: 'Items Add Less',
-            },
-            {
-                title: 'Barcode',
-            },
-            {
-                title: 'Accounts',
-                submenu: ['Receipt', 'Payment', 'Edit Rcpt/Pymt', 'Cancel Rcpt/Pymt', 'Jurnal Entry', 'Cheque Register']
-            },
-            {
-                title: 'Debit Note',
-                submenu: ['Debit Note 1', 'Debit Note 2', 'Debit Note 3']
-            },
-            {
-                title: 'Credit Note',
-                submenu: ['Credit Note 1', 'Credit Note 2', 'Credit Note 3']
-            },
-            {
-                title: 'Staff',
-                submenu: ['Staff 1', 'Staff 2', 'Staff 3']
-            },
-
-        ]
-    },
-    {
-        title: 'Reports',
-        submenu: [
-            {
-                title: 'Sales',
-            },
-            {
-                title: 'Sales Return',
-            },
-            {
-                title: 'Purchase',
-            },
-            {
-                title: 'Purchase Return',
-            },
-            {
-                title: 'Rent Issue',
-            },
-            {
-                title: 'Rent Return',
-            },
-            {
-                title: 'Order',
-            },
-            {
-                title: 'Items',
-            },
-            {
-                title: 'Customer',
-            },
-            {
-                title: 'Supplier',
-            },
-            {
-                title: 'Staff',
-            },
-            {
-                title: 'Accounts',
-                submenu: ['A/c Ledger', 'Daybook', 'Cashbook', 'Rcpt/Pymt Report', 'Cheque Register', 'Chart of Accounts', 'Trial Balance', 'Balance Sheet', 'Profit Loss']
-            },
-            {
-                title: 'Sales',
-            },
-            {
-                title: 'Profit Register',
-            },
-            {
-                title: 'Barcode Register',
-            },
-            {
-                title: 'Barcode Duplicity',
-            },
-            {
-                title: 'Transaction Analysis',
-            },
-
-        ]
-    },
-    {
-        title: 'Utilites',
-        submenu: [
-            {
-                title: 'Calculator',
-            },
-            {
-                title: 'Reminder',
-            },
-            {
-                title: 'Calendar',
-            },
-            {
-                title: 'Backup',
-            },
-            {
-                title: 'Import',
-            },
-            {
-                title: 'SMS',
-            },
-
-        ]
-    },
-    {
-        title: 'Help',
-    },
-];
-
-
 
 export const groceryItems = [
     { value: "rice", label: "Rice" },
@@ -307,3 +99,283 @@ export const barcodeEntries: BarcodeEntry[] = [
     },
 ];
 
+export const menuData: MenuItem[] = [
+    {
+        label: 'File',
+        items: [
+            { label: 'Printer Settings' }, { label: 'Biltech Settings' }, { label: 'Exit' }
+        ]
+    },
+    {
+        label: 'Master',
+        items: [
+            {
+                label: 'Accounts',
+                items: [
+                    { label: 'Accounts 1' },
+                    { label: 'Accounts 2' },
+                    { label: 'Accounts 3' },
+                ]
+            },
+            {
+                label: 'Customer',
+                items: [
+                    { label: 'Customer' },
+                    { label: 'Type' },
+                ]
+            },
+            {
+                label: 'Supplier',
+            },
+            {
+                label: 'Staff',
+            },
+            {
+                label: 'Vehicle',
+            },
+            {
+                label: 'Items',
+                items: [
+                    { label: 'Items 1' },
+                    { label: 'Items 2' },
+                ]
+            },
+            {
+                label: 'Route',
+            },
+            {
+                label: 'City',
+            },
+            {
+                label: 'Town',
+            },
+            {
+                label: 'District',
+            },
+            {
+                label: 'Bill Type',
+            },
+            {
+                label: 'Counter',
+            },
+            {
+                label: 'User',
+                items: [
+                    { label: 'User 1' },
+                    { label: 'User 2' },
+                    { label: 'User 3' },
+                ]
+            },
+        ]
+    },
+    {
+        label: 'Transactions',
+        items: [
+            {
+                label: 'Sales',
+                items: [
+                    { label: 'New' },
+                    { label: 'Edit' },
+                    { label: 'Cancel' },
+                    { label: 'Reprint' },
+                ]
+            },
+            {
+                label: 'Sales Return',
+                items: [
+                    { label: 'Sales Return 1' },
+                    { label: 'Sales Return 2' },
+                    { label: 'Sales Return 3' },
+                    { label: 'Sales Return 4' },
+                ]
+            },
+            {
+                label: 'Purchase',
+                items: [
+                    { label: 'Bill' },
+                    { label: 'Edit' },
+                    { label: 'Cancel' },
+                ]
+            },
+            {
+                label: 'Purchase Return',
+                items: [
+                    { label: 'Purchase Return 1' },
+                    { label: 'Purchase Return 2' },
+                    { label: 'Purchase Return 3' },
+                    { label: 'Purchase Return 4' },
+                ]
+            },
+            {
+                label: 'Rent Issue',
+                items: [
+                    { label: 'Rent Issue 1' },
+                    { label: 'Rent Issue 2' },
+                    { label: 'Rent Issue 3' },
+                    { label: 'Rent Issue 4' },
+                ]
+            },
+            {
+                label: 'Rent Return',
+                items: [
+                    { label: 'Rent Return 1' },
+                    { label: 'Rent Return 2' },
+                    { label: 'Rent Return 3' },
+                    { label: 'Rent Return 4' },
+                ]
+            },
+            {
+                label: 'Order',
+                items: [
+                    { label: 'Order 1' },
+                    { label: 'Order 2' },
+                    { label: 'Order 3' },
+                    { label: 'Order 4' },
+                ]
+            },
+            {
+                label: 'Items Add Less',
+            },
+            {
+                label: 'Barcode',
+            },
+            {
+                label: 'Accounts',
+                items: [
+                    { label: 'Receipt' },
+                    { label: 'Payment' },
+                    { label: 'Edit Rcpt/Pymt' },
+                    { label: 'Cancel Rcpt/Pymt' },
+                    { label: 'Jurnal Entry' },
+                    { label: 'Cheque Register' },
+                ]
+            },
+            {
+                label: 'Debit Note',
+                items: [
+                    { label: 'Debit Note 1' },
+                    { label: 'Debit Note 2' },
+                    { label: 'Debit Note 3' },
+                    { label: 'Debit Note 4' },
+                ]
+            },
+            {
+                label: 'Credit Note',
+                items: [
+                    { label: 'Credit Note 1' },
+                    { label: 'Credit Note 2' },
+                    { label: 'Credit Note 3' },
+                    { label: 'Credit Note 4' },
+                ]
+            },
+            {
+                label: 'Staff',
+                items: [
+                    { label: 'Staff 1' },
+                    { label: 'Staff 2' },
+                    { label: 'Staff 3' },
+                    { label: 'Staff 4' },
+                ]
+            },
+        ]
+    },
+    {
+        label: 'Reports',
+        items: [
+            {
+                label: 'Sales',
+            },
+            {
+                label: 'Sales Return',
+            },
+            {
+                label: 'Purchase',
+            },
+            {
+                label: 'Purchase Return',
+            },
+            {
+                label: 'Rent Issue',
+            },
+            {
+                label: 'Rent Return',
+            },
+            {
+                label: 'Order',
+            },
+            {
+                label: 'Items',
+            },
+            {
+                label: 'Customer',
+            },
+            {
+                label: 'Supplier',
+            },
+            {
+                label: 'Staff',
+            },
+            {
+                label: 'Accounts',
+                items: [
+                    { label: 'A/c Ledger' },
+                    { label: 'Daybook' },
+                    { label: 'Cashbook' },
+                    { label: 'Rcpt/Pymt Report' },
+                    { label: 'Cheque Register' },
+                    { label: 'Chart of Accounts' },
+                    { label: 'Trial Balance' },
+                    { label: 'Balance Sheet' },
+                    {
+                        label: 'Profit Loss',
+                        items: [
+                            { label: 'Upto Date' },
+                            { label: 'TPL Report' }
+                        ]
+                    }
+                ]
+            },
+            {
+                label: 'Sales',
+            },
+            {
+                label: 'Profit Register',
+            },
+            {
+                label: 'Barcode Register',
+            },
+            {
+                label: 'Barcode Duplicity',
+            },
+            {
+                label: 'Transaction Analysis',
+            },
+        ]
+    },
+    {
+        label: 'Services',
+        items: [
+            {
+                label: 'Calculator',
+            },
+            {
+                label: 'Reminder',
+            },
+            {
+                label: 'Calendar',
+            },
+            {
+                label: 'Backup',
+            },
+            {
+                label: 'Import',
+            },
+            {
+                label: 'SMS',
+            },
+        ]
+    },
+    {
+        label: 'Help',
+    }
+];

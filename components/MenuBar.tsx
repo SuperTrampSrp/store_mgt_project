@@ -5,7 +5,7 @@ import { updateTime } from '@/lib/utils';
 import { useModalStore } from '@/app/store/modals';
 
 
-const MenuBar = ({ handleClick }: openModalProps) => {
+const MenuBar = () => {
 
     const [time, setTime] = useState<string>();
     const [day, setDay] = useState<string>();

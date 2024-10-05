@@ -1,18 +1,16 @@
 import { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import { TableSelector } from "./TableSelector";
-import CashTable from "./CashTable";
 import BarcodeTable from "./BarcodeTable";
 
 const BarcodeRegister = ({ onCloseModal }: closeModalProps) => {
-    const [items, setItems] = useState<string[]>([])
     const [value, setValue] = useState<string>("")
 
 
 
     return (
         <div className="modal-primary_div">
-            <div className="modal-main_div">
+            <div className="modal-main_div w-11/12">
                 <div className="flex justify-center text-white">
                     <h2 className="text-xl font-bold m-2">Barcode Register</h2>
                 </div>

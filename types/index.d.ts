@@ -1,28 +1,10 @@
 
-declare interface NavBarProps {
-    menuData: MenuItem[];
-}
 
-declare interface openModalProps {
-    onOpenModal: () => void;
-    handleClick: (e: MouseEvent<HTMLElement>) => void;
-
-}
 declare interface closeModalProps {
     onCloseModal: () => void;
     modalName?: string;
 }
 
-
-declare interface MenuItemProps {
-    title: string;
-    submenu?: SubMenu[];
-}
-
-declare interface SubMenu {
-    title: string;
-    submenu?: string[];
-}
 
 declare type GroceryItemProps = {
     value: string
@@ -85,6 +67,9 @@ declare type SalesStateProps = {
 }
 
 declare type ModalState = {
+
+    modalName: string;
+
     isCashbookModal: boolean;
     isSalesModal: boolean;
     isPurchaseModal: boolean,
@@ -92,6 +77,8 @@ declare type ModalState = {
     isJurnalEntryModal: boolean,
     isBarcodeRegisterModal: boolean,
     isCustomerDetailsModal: boolean,
+
+    setModalName: (name: string) => void;
 
     openCashbookModal: () => void;
     openSalesModal: () => void;
@@ -103,5 +90,21 @@ declare type ModalState = {
 
     closeModal: () => void;
 
+    handleClick?: (e: React.MouseEvent<HTMLElement>) => void;
+}
 
+declare type ButtonProps = React.ComponentProps<typeof Button>;
+
+declare type MenuItem = {
+    label: string;
+    items?: MenuItem[];
+}
+
+declare interface NestedDropdownProps {
+    items: MenuItem[];
+}
+
+declare interface SingleDropdownProps {
+    item: MenuItem;
+    depth: number;
 }
