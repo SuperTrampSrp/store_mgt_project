@@ -18,8 +18,6 @@ const ScrollTable = ({ parentRef }: ChildProps) => {
 
     }, [value])
 
-    // parentRef === ''
-
     return (
         <div className="bg-slate-50">
             <table className=" w-full">

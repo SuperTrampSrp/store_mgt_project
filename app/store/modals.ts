@@ -2,6 +2,7 @@ import { create } from 'zustand'
 
 export const useModalStore = create<ModalState>((set) => ({
     modalName: '',
+    isModal: false,
 
     isCashbookModal: false,
     isSalesModal: false,
@@ -13,7 +14,7 @@ export const useModalStore = create<ModalState>((set) => ({
 
     setModalName: (name: string) => set({ modalName: name }),
 
-    openCashbookModal: () => set({ isCashbookModal: true }),
+    openCashbookModal: () => set({ isCashbookModal: true, isModal: true }),
     openSalesModal: () => set({ isSalesModal: true }),
     openPurchaseModal: () => set({ isPurchaseModal: true }),
     openRecieptEntryModal: () => set({ isRecieptEntryModal: true }),

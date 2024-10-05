@@ -11,6 +11,7 @@ import BarcodeRegister from "./BarcodeRegister";
 import CustomerDetails from "./CustomerDetails";
 import { useModalStore } from "@/app/store/modals";
 import Dropdown from "./Dropdown";
+import AnimatedModal from "./AnimatedModal";
 
 
 const NavBar = () => {
@@ -28,25 +29,26 @@ const NavBar = () => {
                 <MenuBar />
 
                 {
-                    isSalesModal && (<SalesDetails onCloseModal={handleCloseModal} />)
+
+                    isSalesModal && (<AnimatedModal><SalesDetails onCloseModal={handleCloseModal} /> </AnimatedModal>)
                 }
                 {
-                    isPurchaseModal && (<PurchaseDetails onCloseModal={handleCloseModal} />)
+                    isPurchaseModal && (<AnimatedModal><PurchaseDetails onCloseModal={handleCloseModal} /></AnimatedModal>)
                 }
                 {
-                    isRecieptEntryModal && (<ReceiptEntry onCloseModal={handleCloseModal} />)
+                    isRecieptEntryModal && (<AnimatedModal><ReceiptEntry onCloseModal={handleCloseModal} /></AnimatedModal>)
                 }
                 {
-                    isJurnalEntryModal && (<JurnalEntry onCloseModal={handleCloseModal} />)
+                    isJurnalEntryModal && (<AnimatedModal><JurnalEntry onCloseModal={handleCloseModal} /></AnimatedModal>)
                 }
                 {
-                    isCashbookModal && (<CashBook onCloseModal={handleCloseModal} />)
+                    isCashbookModal && (<AnimatedModal><CashBook onCloseModal={handleCloseModal} /></AnimatedModal>)
                 }
                 {
-                    isBarcodeRegisterModal && (<BarcodeRegister onCloseModal={handleCloseModal} />)
+                    isBarcodeRegisterModal && (<AnimatedModal><BarcodeRegister onCloseModal={handleCloseModal} /></AnimatedModal>)
                 }
                 {
-                    isCustomerDetailsModal && (<CustomerDetails onCloseModal={handleCloseModal} />)
+                    isCustomerDetailsModal && (<AnimatedModal><CustomerDetails onCloseModal={handleCloseModal} /></AnimatedModal>)
                 }
             </div>
         </div>

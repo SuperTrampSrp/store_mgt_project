@@ -18,7 +18,7 @@ const CashTable = () => {
                     {
                         cashbookEntries.map((item) => (
 
-                            <tr className="text-left">
+                            <tr className="text-left" key={item.voucherNo}>
                                 <td>{item.date}</td>
                                 <td>{item.voucherNo}</td>
                                 <td>{item.accName}</td>

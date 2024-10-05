@@ -6,10 +6,9 @@ import CashTable from "./CashTable";
 const CashBook = ({ onCloseModal }: closeModalProps) => {
     const [value, setValue] = useState<string>("")
 
-
-
     return (
-        <div className="modal-primary_div">
+
+        <div className="modal-primary_div transition ease-in-out delay-150 ">
             <div className="modal-main_div w-8/12">
                 <div className="flex justify-center text-white">
                     <h2 className="text-xl font-bold m-2">Cashbook</h2>
@@ -114,6 +113,8 @@ const CashBook = ({ onCloseModal }: closeModalProps) => {
                 </div>
             </div>
         </div>
+
+
     )
 }
 

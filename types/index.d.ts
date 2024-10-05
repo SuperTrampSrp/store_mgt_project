@@ -69,6 +69,7 @@ declare type SalesStateProps = {
 declare type ModalState = {
 
     modalName: string;
+    isModal?: boolean;
 
     isCashbookModal: boolean;
     isSalesModal: boolean;
@@ -107,4 +108,8 @@ declare interface NestedDropdownProps {
 declare interface SingleDropdownProps {
     item: MenuItem;
     depth: number;
+}
+
+declare type ModalAnimProps {
+    children: React.ReactNode;
 }
