@@ -18,10 +18,13 @@ const NavBar = () => {
 
     const { isCashbookModal, isSalesModal, isBarcodeRegisterModal, isCustomerDetailsModal, isJurnalEntryModal, isPurchaseModal, isRecieptEntryModal, closeModal } = useModalStore();
 
-    const handleCloseModal = () => closeModal();
+    const handleCloseModal = () => {
+        closeModal();
+    }
+
 
     return (
-        <div>
+        <div className="fixed w-full top-0">
             <nav className="relative p-3 m-0 bg-teal-950">
                 <Dropdown items={menuData} />
             </nav>
@@ -29,7 +32,6 @@ const NavBar = () => {
                 <MenuBar />
 
                 {
-
                     isSalesModal && (<AnimatedModal><SalesDetails onCloseModal={handleCloseModal} /> </AnimatedModal>)
                 }
                 {

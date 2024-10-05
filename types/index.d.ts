@@ -110,6 +110,6 @@ declare interface SingleDropdownProps {
     depth: number;
 }
 
-declare type ModalAnimProps {
+declare type ModalAnimProps = {
     children: React.ReactNode;
 }

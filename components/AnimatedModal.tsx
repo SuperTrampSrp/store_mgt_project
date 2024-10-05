@@ -5,6 +5,7 @@ import { useModalStore } from "@/app/store/modals";
 const AnimatedModal = ({ children }: ModalAnimProps) => {
 
     const { isModal } = useModalStore()
+    console.log(isModal)
 
     return (
         <AnimatePresence>
@@ -20,7 +21,7 @@ const AnimatedModal = ({ children }: ModalAnimProps) => {
                         initial={{ opacity: 0, scale: 0.75, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.75, y: 20 }}
-                        transition={{ type: "spring", duration: 0.5 }}
+                        transition={{ type: "spring", duration: 0.6 }}
                         onClick={(e) => e.stopPropagation()}
                         className=" w-full cursor-default relative overflow-hidden h-full"
                     >

@@ -10,7 +10,6 @@ import { Popover, PopoverContent, PopoverTrigger, } from "@/components/ui/popove
 
 import { groceryItems } from "@/constants"
 
-
 export function TableSelector({ value, setValue }: TableSelectorProps) {
     const [open, setOpen] = React.useState(false)
 

@@ -15,42 +15,42 @@ export const useModalStore = create<ModalState>((set) => ({
     setModalName: (name: string) => set({ modalName: name }),
 
     openCashbookModal: () => set({ isCashbookModal: true, isModal: true }),
-    openSalesModal: () => set({ isSalesModal: true }),
-    openPurchaseModal: () => set({ isPurchaseModal: true }),
-    openRecieptEntryModal: () => set({ isRecieptEntryModal: true }),
-    openJurnalEntryModal: () => set({ isJurnalEntryModal: true }),
-    openBarcodeRegisterModal: () => set({ isBarcodeRegisterModal: true }),
-    openCustomerDetailsModal: () => set({ isCustomerDetailsModal: true }),
-    closeModal: () => set({ isCashbookModal: false, isSalesModal: false, isPurchaseModal: false, isRecieptEntryModal: false, isJurnalEntryModal: false, isBarcodeRegisterModal: false, isCustomerDetailsModal: false, }),
+    openSalesModal: () => set({ isSalesModal: true, isModal: true }),
+    openPurchaseModal: () => set({ isPurchaseModal: true, isModal: true }),
+    openRecieptEntryModal: () => set({ isRecieptEntryModal: true, isModal: true }),
+    openJurnalEntryModal: () => set({ isJurnalEntryModal: true, isModal: true }),
+    openBarcodeRegisterModal: () => set({ isBarcodeRegisterModal: true, isModal: true }),
+    openCustomerDetailsModal: () => set({ isCustomerDetailsModal: true, isModal: true }),
+    closeModal: () => set({ isCashbookModal: false, isSalesModal: false, isPurchaseModal: false, isRecieptEntryModal: false, isJurnalEntryModal: false, isBarcodeRegisterModal: false, isCustomerDetailsModal: false, isModal: false, }),
+
 
     handleClick: (e: React.MouseEvent<HTMLElement>) => {
         const id = e.currentTarget.id
         set(() => ({ modalName: id }));
-        console.log(id)
         switch (id) {
             case 'New':
-                set(() => ({ isSalesModal: true }));
+                set(() => ({ isSalesModal: true, isModal: true }));
                 break;
             case 'Bill':
-                set(() => ({ isPurchaseModal: true }));
+                set(() => ({ isPurchaseModal: true, isModal: true }));
                 break;
             case 'ReceiptEntry':
-                set(() => ({ isRecieptEntryModal: true }));
+                set(() => ({ isRecieptEntryModal: true, isModal: true }));
                 break;
             case 'Payment':
-                set(() => ({ isRecieptEntryModal: true }));
+                set(() => ({ isRecieptEntryModal: true, isModal: true }));
                 break;
             case 'Jurnal Entry':
-                set(() => ({ isJurnalEntryModal: true }));
+                set(() => ({ isJurnalEntryModal: true, isModal: true }));
                 break;
             case 'Cashbook':
-                set(() => ({ isCashbookModal: true }));
+                set(() => ({ isCashbookModal: true, isModal: true }));
                 break;
             case 'Barcode Register':
-                set(() => ({ isBarcodeRegisterModal: true }));
+                set(() => ({ isBarcodeRegisterModal: true, isModal: true }));
                 break;
             case 'Customer':
-                set(() => ({ isCustomerDetailsModal: true }));
+                set(() => ({ isCustomerDetailsModal: true, isModal: true }));
                 break;
 
             default:
