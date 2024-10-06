@@ -50,16 +50,16 @@ html:host {}
     @apply w-1/2 flex justify-end pr-1;
   }
 
-  .summary-btn {
-    @apply p-1 border border-none rounded-lg bg-cyan-600 hover:bg-cyan-500 w-20;
+  .btn-primary {
+    @apply p-2 bg-teal-950 outline-none rounded-full w-20 text-gray-50 hover:text-white hover:bg-gradient-to-br from-teal-800 to-lime-400 transition ease-in-out delay-75 hover:scale-110;
   }
 
   .btn-secondary {
-    @apply m-1 border rounded-lg p-2 w-16;
+    @apply m-1 border rounded-lg p-2 w-16 transition duration-75 delay-75 ease-in-out hover:scale-110;
   }
 
   .table-navigation {
-    @apply bg-pink-700 cursor-pointer hover:bg-pink-500;
+    @apply cursor-pointer hover:scale-125 outline outline-1 rounded-3xl transition duration-75 delay-75 hover:outline-red-500 ease-in-out mb-2;
   }
 
   .table-summary_row {
@@ -103,8 +103,10 @@ html:host {}
   }
 
   .modal-close_btn {
-    @apply mt-2 bg-red-500 text-white py-1 px-2 rounded-full hover:bg-red-600 transition-colors;
+    @apply m-2 mt-4 w-20 bg-red-500 text-white py-1 px-2 rounded-full hover:bg-gradient-to-tl from-red-600 to-purple-500 hover:scale-110 transition ease-in-out duration-200 delay-75;
   }
+
+
 
 
 

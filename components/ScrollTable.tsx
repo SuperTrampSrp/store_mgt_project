@@ -123,9 +123,9 @@ const ScrollTable = ({ parentRef }: ChildProps) => {
 
                 {
                     parentRef.current?.id === 'sales' && (<div className="flex gap-3">
-                        <button className="p-1 bg-cyan-600 border rounded-xl border-none hover:bg-cyan-400" title='add'><Add /></button>
-                        <button className="p-1 bg-red-600 border rounded-xl border-none hover:bg-red-400" title='delete'><Delete /></button>
-                        <span className="p-2">Stock :</span>
+                        <button className="p-1 bg-cyan-900 outline outline-1 my-2 rounded-full border-none hover:bg-gradient-to-br from-teal-800 to-cyan-500 w-20 transition ease-in-out delay-75 duration-200 hover:scale-110" title='add'><Add /></button>
+                        <button className="p-1 bg-red-900 outline outline-1 my-2 rounded-full border-none hover:bg-gradient-to-br from-red-800 to-pink-500 w-20 transition ease-in-out delay-75 duration-200 hover:scale-110" title='delete'><Delete /></button>
+                        <span className="p-2 my-2">Stock :</span>
                     </div>
                     )
                 }
@@ -133,8 +133,8 @@ const ScrollTable = ({ parentRef }: ChildProps) => {
                     {
                         parentRef.current?.id === 'purchase' && (
                             <div className='flex gap-2'>
-                                <button className="p-1 bg-cyan-600 border rounded-xl border-none hover:bg-cyan-400"><Add /></button>
-                                <button className="p-1 bg-red-600 border rounded-xl border-none hover:bg-red-400"><Delete /></button>
+                                <button className="p-1 bg-cyan-900 outline outline-1 my-2 rounded-full border-none hover:bg-gradient-to-br from-teal-800 to-cyan-500 w-20 transition ease-in-out delay-75 duration-200 hover:scale-110"><Add /></button>
+                                <button className="p-1 bg-red-900 outline outline-1 my-2 rounded-full border-none hover:bg-gradient-to-br from-red-800 to-pink-500 w-20 transition ease-in-out delay-75 duration-200 hover:scale-110"><Delete /></button>
                             </div>
                         )
                     }

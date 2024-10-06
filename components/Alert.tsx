@@ -5,7 +5,7 @@ import {
 const Alert = () => {
     return (
         <div className="summary-items">
-            <a className='summary-btn text-center'>
+            <a className='btn-primary text-center'>
                 <AlertDialog >
                     <AlertDialogTrigger>Save</AlertDialogTrigger>
                     <AlertDialogContent>
