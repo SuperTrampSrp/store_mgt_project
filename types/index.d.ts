@@ -78,6 +78,8 @@ declare type ModalState = {
     isJurnalEntryModal: boolean,
     isBarcodeRegisterModal: boolean,
     isCustomerDetailsModal: boolean,
+    isCalculatorModal: boolean,
+
 
     setModalName: (name: string) => void;
 
@@ -88,6 +90,7 @@ declare type ModalState = {
     openJurnalEntryModal: () => void;
     openBarcodeRegisterModal: () => void;
     openCustomerDetailsModal: () => void;
+    openCalculatorModal: () => void;
 
     closeModal: () => void;
 

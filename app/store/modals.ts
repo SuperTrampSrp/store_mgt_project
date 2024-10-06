@@ -11,6 +11,7 @@ export const useModalStore = create<ModalState>((set) => ({
     isJurnalEntryModal: false,
     isBarcodeRegisterModal: false,
     isCustomerDetailsModal: false,
+    isCalculatorModal: false,
 
     setModalName: (name: string) => set({ modalName: name }),
 
@@ -21,7 +22,8 @@ export const useModalStore = create<ModalState>((set) => ({
     openJurnalEntryModal: () => set({ isJurnalEntryModal: true, isModal: true }),
     openBarcodeRegisterModal: () => set({ isBarcodeRegisterModal: true, isModal: true }),
     openCustomerDetailsModal: () => set({ isCustomerDetailsModal: true, isModal: true }),
-    closeModal: () => set({ isCashbookModal: false, isSalesModal: false, isPurchaseModal: false, isRecieptEntryModal: false, isJurnalEntryModal: false, isBarcodeRegisterModal: false, isCustomerDetailsModal: false, isModal: false, }),
+    openCalculatorModal: () => set({ isCalculatorModal: true, isModal: true }),
+    closeModal: () => set({ isCashbookModal: false, isSalesModal: false, isPurchaseModal: false, isRecieptEntryModal: false, isJurnalEntryModal: false, isBarcodeRegisterModal: false, isCustomerDetailsModal: false, isCalculatorModal: false, isModal: false, }),
 
 
     handleClick: (e: React.MouseEvent<HTMLElement>) => {
@@ -51,6 +53,9 @@ export const useModalStore = create<ModalState>((set) => ({
                 break;
             case 'Customer':
                 set(() => ({ isCustomerDetailsModal: true, isModal: true }));
+                break;
+            case 'Calculator':
+                set(() => ({ isCalculatorModal: true, isModal: true }));
                 break;
 
             default:

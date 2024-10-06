@@ -10,7 +10,7 @@ const MenuBar = () => {
     const [time, setTime] = useState<string>();
     const [day, setDay] = useState<string>();
 
-    const { openCashbookModal, openSalesModal, openRecieptEntryModal } = useModalStore();
+    const { openCashbookModal, openSalesModal, openRecieptEntryModal, openCalculatorModal } = useModalStore();
 
 
 
@@ -43,7 +43,9 @@ const MenuBar = () => {
                 <Draw fontSize='large' className='text-emerald-300 hover:scale-125' />
                 <Delete fontSize='large' className='text-red-500 hover:scale-125' />
                 <RecentActors fontSize='large' className='text-cyan-500 hover:scale-125' />
-                <Calculate fontSize='large' className='text-lime-500 hover:scale-125' />
+                <button onClick={openCalculatorModal} id='calculator' title='calculator'>
+                    <Calculate fontSize='large' className='text-lime-500 hover:scale-125' />
+                </button>
                 <CalendarMonth fontSize='large' className='text-amber-400 hover:scale-125' />
                 <ForwardToInbox fontSize='large' className='text-green-300 hover:scale-125' />
                 <LocalPrintshop fontSize='large' className='text-pink-600 hover:scale-125' />

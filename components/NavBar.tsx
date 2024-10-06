@@ -12,11 +12,12 @@ import CustomerDetails from "./CustomerDetails";
 import { useModalStore } from "@/app/store/modals";
 import Dropdown from "./Dropdown";
 import AnimatedModal from "./AnimatedModal";
+import Calculator from "./Calculator";
 
 
 const NavBar = () => {
 
-    const { isCashbookModal, isSalesModal, isBarcodeRegisterModal, isCustomerDetailsModal, isJurnalEntryModal, isPurchaseModal, isRecieptEntryModal, closeModal } = useModalStore();
+    const { isCashbookModal, isSalesModal, isBarcodeRegisterModal, isCustomerDetailsModal, isJurnalEntryModal, isPurchaseModal, isRecieptEntryModal, isCalculatorModal, closeModal } = useModalStore();
 
     const handleCloseModal = () => {
         closeModal();
@@ -51,6 +52,9 @@ const NavBar = () => {
                 }
                 {
                     isCustomerDetailsModal && (<AnimatedModal><CustomerDetails onCloseModal={handleCloseModal} /></AnimatedModal>)
+                }
+                {
+                    isCalculatorModal && (<AnimatedModal><Calculator onCloseModal={handleCloseModal} /></AnimatedModal>)
                 }
             </div>
         </div>
